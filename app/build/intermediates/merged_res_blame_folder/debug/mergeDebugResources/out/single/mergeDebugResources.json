@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\drawable_heart.jpg.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\drawable\\heart.jpg"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\layout_activity_camera_xpreview.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\layout\\activity_camera_xpreview.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\drawable_hehe.png.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\drawable\\hehe.png"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.dieu21012907.donhiptimgiatoc.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "com.dieu21012907.donhiptimgiatoc.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\drawable_bg_card_selector.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\drawable\\bg_card_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-debug-36:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\manht\\.gradle\\daemon\\8.13\\com.dieu21012907.donhiptimgiatoc.app-main-38:\\mipmap-hdpi\\ic_launcher.webp"
+    }
+]

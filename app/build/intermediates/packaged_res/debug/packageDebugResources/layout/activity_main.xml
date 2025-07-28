@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F3F3F3">
+
+    <!-- PHẦN TRÊN: Camera + Nhịp tim + Gia tốc + Server -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 1. Camera Preview -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:background="#FFF">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/previewView"
+                android:layout_width="match_parent"
+                android:layout_height="220dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- 2. Trạng thái đang đo -->
+        <TextView
+            android:id="@+id/textMeasuringStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/status_measuring"
+            android:textSize="16sp"
+            android:textColor="#D32F2F"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#FFEBEE"
+            android:layout_marginBottom="8dp" />
+        <!-- Progress bar đo nhịp tim -->
+        <ProgressBar
+            android:id="@+id/progressCircle"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:layout_marginBottom="8dp"
+            android:progressTint="#E53935"/>
+
+        <TextView
+            android:id="@+id/tvProgressPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đang đo (0%)"
+            android:textColor="#E53935"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <!-- 3. Nhịp tim & Gia tốc -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/textHeartRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/heart_rate_label"
+                android:textColor="#E53935"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textAcceleration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/acceleration_label"
+                android:textColor="#1E88E5"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 4. Tọa độ X-Y-Z -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/textX"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/x_label"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textY"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/y_label"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textZ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/z_label"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 5. Server khả dụng -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server_title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp" />
+
+        <LinearLayout
+            android:id="@+id/serverCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_selector"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/textServerAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/server_address"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textServerStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/server_status"
+                android:textSize="14sp"
+                android:textColor="#4CAF50"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Tiêu đề BLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ble_devices_title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp" />
+    </LinearLayout>
+
+    <!-- PHẦN CUỘN ĐƯỢC: DANH SÁCH BLE -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/deviceRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:overScrollMode="always"
+        android:scrollbars="vertical" />
+
+    <!-- Nút làm mới thiết bị -->
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/refresh_button"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2196F3"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold" />
+</LinearLayout>

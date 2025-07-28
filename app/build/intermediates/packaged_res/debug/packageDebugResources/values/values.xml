@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="acceleration_label">Gia tốc: -- m/s²</string>
+    <string name="app_name">donhiptimgiatoc</string>
+    <string name="ble_devices_title">Thiết bị BLE khả dụng:</string>
+    <string name="heart_rate_label">Nhịp tim: -- bpm</string>
+    <string name="refresh_button">Làm mới thiết bị</string>
+    <string name="server_address">Địa chỉ: http://192.168.1.1/getdata.php</string>
+    <string name="server_status">Tình trạng: Kết nối</string>
+    <string name="server_title">Server khả dụng:</string>
+    <string name="status_measuring">⚠️ Trạng thái: Đang đo</string>
+    <string name="x_label">x = --</string>
+    <string name="y_label">y = --</string>
+    <string name="z_label">z = --</string>
+    <style name="Theme.Donhiptimgiatoc" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+    </style>
+</resources>
