@@ -8,6 +8,8 @@ drawable hehe
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id btnRefresh
+id deviceAddress
+id deviceName
 id deviceRecyclerView
 id previewView
 id progressCircle
@@ -24,6 +26,7 @@ id tvHeartRate
 id tvProgressPercent
 layout activity_camera_xpreview
 layout activity_main
+layout item_ble_device
 mipmap ic_launcher
 mipmap ic_launcher_round
 string acceleration_label

@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class BLEDeviceAdapter extends RecyclerView.Adapter<BLEDeviceAdapter.DeviceViewHolder> {
+    private final List<BluetoothDevice> devices;
+    private final OnDeviceClickListener listener;
+
     public interface OnDeviceClickListener {
         void onDeviceClick(BluetoothDevice device);
     }
-
-    private final List<BluetoothDevice> devices;
-    private final OnDeviceClickListener listener;
 
     public BLEDeviceAdapter(List<BluetoothDevice> devices, OnDeviceClickListener listener) {
         this.devices = devices;
@@ -26,14 +26,16 @@ public class BLEDeviceAdapter extends RecyclerView.Adapter<BLEDeviceAdapter.Devi
     @NonNull
     @Override
     public DeviceViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_ble_device, parent, false);
         return new DeviceViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull DeviceViewHolder holder, int position) {
         BluetoothDevice device = devices.get(position);
-        holder.nameText.setText(device.getName() != null ? device.getName() : device.getAddress());
+        holder.deviceName.setText(device.getName() != null ? device.getName() : "Không rõ tên");
+        holder.deviceAddress.setText(device.getAddress());
         holder.itemView.setOnClickListener(v -> listener.onDeviceClick(device));
     }
 
@@ -43,10 +45,12 @@ public class BLEDeviceAdapter extends RecyclerView.Adapter<BLEDeviceAdapter.Devi
     }
 
     static class DeviceViewHolder extends RecyclerView.ViewHolder {
-        TextView nameText;
-        public DeviceViewHolder(@NonNull View itemView) {
+        TextView deviceName, deviceAddress;
+
+        DeviceViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameText = itemView.findViewById(android.R.id.text1);
+            deviceName = itemView.findViewById(R.id.deviceName);
+            deviceAddress = itemView.findViewById(R.id.deviceAddress);
         }
     }
 }

@@ -21,6 +21,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.common.util.concurrent.ListenableFuture;
@@ -131,8 +132,40 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         bleDeviceAdapter = new BLEDeviceAdapter(bleManager.getDeviceList(), device -> bleManager.connectToDevice(device));
         deviceRecyclerView.setAdapter(bleDeviceAdapter);
 
-        bleManager.startScan(() -> bleDeviceAdapter.notifyDataSetChanged());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+
+                ActivityCompat.requestPermissions(this, new String[]{
+                        Manifest.permission.BLUETOOTH_SCAN,
+                        Manifest.permission.BLUETOOTH_CONNECT
+                }, 1001);
+
+            } else {
+                bleManager.startScan(() -> bleDeviceAdapter.notifyDataSetChanged());
+            }
+
+        } else {
+            bleManager.startScan(() -> bleDeviceAdapter.notifyDataSetChanged());
+        }
+
+        deviceRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         btnRefresh.setOnClickListener(v -> bleManager.startScan(() -> bleDeviceAdapter.notifyDataSetChanged()));
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+
+                ActivityCompat.requestPermissions(this,
+                        new String[]{
+                                Manifest.permission.BLUETOOTH_SCAN,
+                                Manifest.permission.BLUETOOTH_CONNECT
+                        },
+                        1001
+                );
+            }
+        }
 
         LinearLayout serverCard = findViewById(R.id.serverCard);
         serverCard.setOnClickListener(v -> {
@@ -233,5 +266,24 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onDestroy();
         if (sensorManager != null) sensorManager.unregisterListener(this);
         if (cameraExecutor != null) cameraExecutor.shutdown();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 1001) {
+            boolean granted = true;
+            for (int r : grantResults) {
+                if (r != PackageManager.PERMISSION_GRANTED) {
+                    granted = false;
+                    break;
+                }
+            }
+            if (granted) {
+                bleManager.startScan(() -> bleDeviceAdapter.notifyDataSetChanged());
+            } else {
+                Toast.makeText(this, "Cần cấp quyền BLE để quét thiết bị", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 }

@@ -3233,6 +3233,8 @@ int id design_menu_item_action_area 0x7f080093
 int id design_menu_item_action_area_stub 0x7f080094
 int id design_menu_item_text 0x7f080095
 int id design_navigation_view 0x7f080096
+int id deviceAddress 0x7f080204
+int id deviceName 0x7f080205
 int id deviceRecyclerView 0x7f080097
 int id dialog_button 0x7f080098
 int id dimensions 0x7f080099
@@ -3732,6 +3734,7 @@ int layout design_text_input_end_icon 0x7f0b002c
 int layout design_text_input_start_icon 0x7f0b002d
 int layout ime_base_split_test_activity 0x7f0b002e
 int layout ime_secondary_split_test_activity 0x7f0b002f
+int layout item_ble_device 0x7f0b006d
 int layout m3_alert_dialog 0x7f0b0030
 int layout m3_alert_dialog_actions 0x7f0b0031
 int layout m3_alert_dialog_title 0x7f0b0032
